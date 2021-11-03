@@ -1,6 +1,7 @@
 import React from "react";
 import Clock from "./Clock";
 import Greeting from "./Greeting";
+import Subway from "./Subway";
 import Uptime from "./Uptime";
 import Weather from "./Weather";
 
@@ -12,6 +13,7 @@ function App() {
         <Greeting />
         <Weather />
         <Uptime />
+        <Subway />
       </div>
     </div>
   );
