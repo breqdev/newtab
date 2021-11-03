@@ -91,14 +91,18 @@ export default function Clock() {
       <span className="text-3xl">{time.toLocaleDateString()}</span>
       <hr className="border-black my-8" />
       <table>
-        <tr>
-          <th>zone</th>
-          <th>offset</th>
-          <th>time</th>
-        </tr>
-        {zones.map((zone) => (
-          <TimezoneClock key={zone.timezone} {...zone} />
-        ))}
+        <thead>
+          <tr>
+            <th>zone</th>
+            <th>offset</th>
+            <th>time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {zones.map((zone) => (
+            <TimezoneClock key={zone.timezone} {...zone} />
+          ))}
+        </tbody>
       </table>
     </div>
   );
