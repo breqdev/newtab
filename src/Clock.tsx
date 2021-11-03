@@ -80,7 +80,7 @@ export default function Clock() {
   ];
 
   return (
-    <div className="flex flex-col text-center border-2 border-black rounded-xl p-8">
+    <div className="row-span-3 flex flex-col text-center border-2 border-black rounded-xl p-8">
       <span className="text-7xl mb-1">
         {time.toLocaleTimeString("en-US", {
           hour: "numeric",
