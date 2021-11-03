@@ -1,6 +1,7 @@
 import React from "react";
 import Clock from "./Clock";
 import Greeting from "./Greeting";
+import Uptime from "./Uptime";
 import Weather from "./Weather";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Clock />
         <Greeting />
         <Weather />
+        <Uptime />
       </div>
     </div>
   );

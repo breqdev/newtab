@@ -15,7 +15,7 @@ export default function Weather() {
   return (
     <div className="border-2 border-black col-span-2 rounded-xl  overflow-hidden">
       {data ? (
-        <div className="flex">
+        <div className="flex h-full items-stretch">
           <div className="bg-gray-400 p-8">
             <img
               src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
