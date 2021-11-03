@@ -13,7 +13,7 @@ export default function Weather() {
   );
 
   return (
-    <div className="border-2 border-black col-span-2 rounded-xl  overflow-hidden">
+    <div className="border-2 border-black md:col-span-2 rounded-xl  overflow-hidden">
       {data ? (
         <div className="flex h-full items-stretch">
           <div className="bg-gray-400 p-8">
@@ -22,8 +22,12 @@ export default function Weather() {
             />
           </div>
           <div className="flex flex-col p-8">
-            <span className="text-7xl">{Math.round(data.main.temp)}° F</span>
-            <span className="text-2xl">{data.weather[0].description}</span>
+            <span className="text-5xl md:text-7xl">
+              {Math.round(data.main.temp)}° F
+            </span>
+            <span className="mt-2 -mb-2 text-lg md:text-2xl">
+              {data.weather[0].description}
+            </span>
           </div>
         </div>
       ) : (

@@ -80,22 +80,24 @@ export default function Clock() {
   ];
 
   return (
-    <div className="row-span-3 flex flex-col text-center border-2 border-black rounded-xl p-8">
-      <span className="text-7xl mb-1">
-        {time.toLocaleTimeString("en-US", {
-          hour: "numeric",
-          minute: "numeric",
-          hour12: false,
-        })}
-      </span>
-      <span className="text-3xl">{time.toLocaleDateString()}</span>
-      <hr className="border-black my-8" />
+    <div className="row-span-3 flex md:flex-col text-center border-2 border-black rounded-xl p-4 md:p-8">
+      <div className="flex flex-col self-center flex-grow">
+        <span className="text-5xl md:text-7xl mb-1">
+          {time.toLocaleTimeString("en-US", {
+            hour: "numeric",
+            minute: "numeric",
+            hour12: false,
+          })}
+        </span>
+        <span className="text-3xl">{time.toLocaleDateString()}</span>
+      </div>
+      <div className="border border-black m-4" />
       <table>
         <thead>
           <tr>
-            <th>zone</th>
-            <th>offset</th>
-            <th>time</th>
+            <th className="p-1">zone</th>
+            <th className="p-1">utc</th>
+            <th className="p-1">time</th>
           </tr>
         </thead>
         <tbody>

@@ -22,16 +22,16 @@ function UptimeData({ monitors }: any) {
 
   if (down.length) {
     return (
-      <span>
+      <p className="text-center">
         <Circle className="bg-red-500">{down.length}</Circle>
         monitors down, incl. {down[0].friendly_name}
-      </span>
+      </p>
     );
   } else {
     return (
-      <span>
+      <p className="text-center">
         <Circle className="bg-green-300">{monitors.length}</Circle> monitors up.
-      </span>
+      </p>
     );
   }
 }
@@ -43,8 +43,12 @@ export default function Uptime() {
   );
 
   return (
-    <div className="border-2 border-black rounded-xl p-8 text-lg">
-      {data ? <UptimeData {...data} /> : <p>failed to load</p>}
+    <div className="border-2 border-black rounded-xl p-6 text-xl">
+      {data ? (
+        <UptimeData {...data} />
+      ) : (
+        <p className="text-center">failed to load</p>
+      )}
     </div>
   );
 }

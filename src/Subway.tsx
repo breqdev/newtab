@@ -20,19 +20,22 @@ export default function Subway() {
   );
 
   return (
-    <div className="border-2 border-black rounded-xl p-8">
+    <div className="border-2 border-black rounded-xl p-6 text-lg">
       {data ? (
-        <span>
+        <p className="text-center">
           <span
-            className="-m-2 p-2 rounded-full mr-1"
+            className="-m-2 p-2 rounded-full mr-1 leading-8 text-white"
             style={{ backgroundColor: "#ed8b00" }}
           >
             Ruggles:
           </span>
-          {" " + data.data.slice(0, 3).map(timeToArrival).join(", ") + " "}min.
-        </span>
+          {" " +
+            data.data.slice(0, 3).map(timeToArrival).join(",\xA0") +
+            "\xA0"}
+          min.
+        </p>
       ) : (
-        <p>failed to load</p>
+        <p className="text-center">failed to load</p>
       )}
     </div>
   );
