@@ -30,7 +30,11 @@ export default function Subway() {
             Ruggles:
           </span>
           {" " +
-            data.data.slice(0, 3).map(timeToArrival).join(",\xA0") +
+            data.data
+              .map(timeToArrival)
+              .filter((t: number) => t >= 0)
+              .slice(0, 3)
+              .join(",\xA0") +
             "\xA0"}
           min.
         </p>
