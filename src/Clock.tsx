@@ -81,7 +81,7 @@ export default function Clock() {
 
   return (
     <div className="row-span-3 flex md:flex-col text-center border-2 border-black rounded-xl p-4 md:p-8">
-      <div className="flex flex-col self-center flex-grow">
+      <div className="flex flex-col self-center">
         <span className="text-5xl md:text-7xl mb-1">
           {time.toLocaleTimeString("en-US", {
             hour: "numeric",
@@ -91,7 +91,9 @@ export default function Clock() {
         </span>
         <span className="text-3xl">{time.toLocaleDateString()}</span>
       </div>
-      <div className="border border-black m-4" />
+      <div className="flex-grow grid items-center">
+        <div className="border border-black m-4" />
+      </div>
       <table>
         <thead>
           <tr>

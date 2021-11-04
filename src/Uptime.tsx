@@ -43,7 +43,7 @@ export default function Uptime() {
   );
 
   return (
-    <div className="border-2 border-black rounded-xl p-6 text-xl">
+    <div className="border-2 border-black rounded-xl p-6 text-xl flex justify-center items-center">
       {data ? (
         <UptimeData {...data} />
       ) : (
