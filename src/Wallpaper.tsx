@@ -37,11 +37,13 @@ export default function Wallpaper() {
     <div className="md:col-span-3 xl:row-span-3 xl:col-span-2 border-2 border-black rounded-xl h-full max-h-80 xl:max-h-full overflow-hidden">
       {data ? (
         <div className="w-full h-full relative">
-          <img
-            className="object-cover w-full h-full"
-            src={data.urls.regular}
-            alt={data.alt_description}
-          />
+          <div className="xl:aspect-w-1 xl:aspect-h-1">
+            <img
+              className="object-cover w-full h-full"
+              src={data.urls.regular}
+              alt={data.alt_description}
+            />
+          </div>
           <p
             className={`absolute right-0 bottom-0 m-4 rounded-full px-2 py-1 md:text-base text-sm ${
               whiteCaption ? "text-white bg-black" : "text-black bg-white"
