@@ -20,7 +20,7 @@ export default function Subway() {
   );
 
   return (
-    <div className="border-2 border-black rounded-xl py-6 px-2 text-lg flex justify-center items-center">
+    <div className="border-2 border-black rounded-3xl py-6 px-2 text-lg flex justify-center items-center">
       {data ? (
         <p className="text-center">
           <span

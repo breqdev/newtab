@@ -80,7 +80,7 @@ export default function Clock() {
   ];
 
   return (
-    <div className="row-span-3 flex md:flex-col text-center border-2 border-black rounded-xl p-4 md:p-8">
+    <div className="row-span-3 flex md:flex-col text-center border-2 border-black rounded-3xl p-4 md:p-8">
       <div className="flex flex-col self-center">
         <span className="text-5xl md:text-7xl mb-1">
           {time.toLocaleTimeString("en-US", {
