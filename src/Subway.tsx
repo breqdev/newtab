@@ -20,14 +20,14 @@ export default function Subway() {
   );
 
   return (
-    <div className="border-2 border-black rounded-xl p-6 text-lg">
+    <div className="border-2 border-black rounded-xl py-6 px-2 text-lg">
       {data ? (
         <p className="text-center">
           <span
             className="-m-2 p-2 rounded-full mr-1 leading-8 text-white"
             style={{ backgroundColor: "#ed8b00" }}
           >
-            Ruggles:
+            Ruggles
           </span>
           {" " +
             data.data
@@ -36,7 +36,7 @@ export default function Subway() {
               .slice(0, 3)
               .join(",\xA0") +
             "\xA0"}
-          min.
+          m.
         </p>
       ) : (
         <p className="text-center">failed to load</p>
