@@ -11,18 +11,21 @@ const fetcher = (url: string) =>
 
 export default function Wallpaper() {
   const { data, error, mutate } = useSWR(
-    "https://api.unsplash.com/photos/random",
+    "https://api.unsplash.com/photos/random?topics=bo8jQKTaE0Y,rnSKDHwwYUk,xHxYTMHLgOc",
     fetcher,
     {
       revalidateOnFocus: false,
       revalidateOnReconnect: false,
       revalidateIfStale: false,
+      errorRetryInterval: 30000,
     }
   );
 
   React.useEffect(() => {
     const interval = setInterval(() => {
-      mutate();
+      if (document.hasFocus()) {
+        mutate();
+      }
     }, 30000);
 
     return () => clearInterval(interval);
