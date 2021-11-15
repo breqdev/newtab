@@ -41,7 +41,7 @@ function GreetingPhrase() {
 export default function Greeting() {
   return (
     <div className="border-2 border-black rounded-3xl md:col-span-2 p-2 md:p-8 flex items-center">
-      <p className="text-3xl md:text-4xl text-center md:text-left">
+      <p className="text-3xl md:text-4xl w-full text-center md:text-left">
         <GreetingPhrase />, <span className="text-pink-500">Brooke</span>.
       </p>
     </div>

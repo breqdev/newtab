@@ -5,11 +5,12 @@ import Subway from "./Subway";
 import Uptime from "./Uptime";
 import Wallpaper from "./Wallpaper";
 import Weather from "./Weather";
+import Links from "./Links";
 
 function App() {
   return (
-    <div className="w-screen min-h-screen grid place-items-start md:place-items-center p-4">
-      <div className="grid xl:grid-flow-col w-full max-w-4xl xl:max-w-7xl grid-cols-1 md:grid-cols-3 auto-cols-fr xl:grid-cols-4 gap-4 md:gap-8">
+    <div className="w-screen min-h-screen flex flex-col justify-center items-center gap-4 md:gap-16 px-4 py-8 md:py-16">
+      <div className="grid xl:grid-flow-col w-full max-w-4xl xl:max-w-7xl grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-8">
         <Clock />
         <Greeting />
         <Weather />
@@ -17,6 +18,7 @@ function App() {
         <Subway />
         <Wallpaper />
       </div>
+      <Links />
     </div>
   );
 }
