@@ -8,12 +8,12 @@ const urFetcher = (url: string) =>
 
 function Circle({ children, className }: any) {
   return (
-    <span className="relative mr-3">
+    <div className="relative w-6 h-6 flex justify-center items-center flex-shrink-0">
       <span
         className={`absolute ${className} inset-0 -m-2 rounded-full -z-10`}
       />
       <span className="z-10">{children}</span>
-    </span>
+    </div>
   );
 }
 
@@ -22,16 +22,16 @@ function UptimeData({ monitors }: any) {
 
   if (down.length) {
     return (
-      <p className="text-center">
+      <div className="text-center flex gap-3 items-center">
         <Circle className="bg-red-500">{down.length}</Circle>
         monitors down, incl. {down[0].friendly_name}
-      </p>
+      </div>
     );
   } else {
     return (
-      <p className="text-center">
+      <div className="text-center flex gap-4 items-center">
         <Circle className="bg-green-300">{monitors.length}</Circle> monitors up.
-      </p>
+      </div>
     );
   }
 }

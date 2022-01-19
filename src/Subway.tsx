@@ -19,6 +19,21 @@ export default function Subway() {
     }
   );
 
+  let departureList;
+
+  if (data?.data) {
+    departureList =
+      " " +
+      data.data
+        .map(timeToArrival)
+        .filter((t: number) => t >= 0)
+        .slice(0, 3)
+        .join(",\xA0") +
+      "\xA0m.";
+  } else {
+    departureList = " no\xA0service.";
+  }
+
   return (
     <div className="border-2 border-black rounded-3xl py-6 px-2 text-lg flex justify-center items-center">
       {data ? (
@@ -29,14 +44,7 @@ export default function Subway() {
           >
             Ruggles
           </span>
-          {" " +
-            data.data
-              .map(timeToArrival)
-              .filter((t: number) => t >= 0)
-              .slice(0, 3)
-              .join(",\xA0") +
-            "\xA0"}
-          m.
+          {departureList}
         </p>
       ) : (
         <p className="text-center">failed to load</p>
