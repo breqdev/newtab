@@ -37,7 +37,7 @@ function TimezoneClock({ timezone, friendlyName }: TimezoneClockProps) {
   return (
     <tr className="font-mono text-lg text-gray-500 hover:text-black transition-colors duration-300">
       <td>{friendlyName}</td>
-      <td>{offsetPadding + offset}</td>
+      <td className="px-3">{offsetPadding + offset}</td>
       <td>
         {timeInZone.toLocaleTimeString("en-US", {
           hour: "numeric",
