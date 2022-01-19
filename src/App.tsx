@@ -5,8 +5,6 @@ import Subway from "./Subway";
 import Uptime from "./Uptime";
 import Wallpaper from "./Wallpaper";
 import Weather from "./Weather";
-import Links from "./Links";
-import Calendar from "./Calendar";
 
 function App() {
   return (
@@ -19,7 +17,6 @@ function App() {
         <Subway />
         <Wallpaper />
       </div>
-      <Calendar />
     </div>
   );
 }
