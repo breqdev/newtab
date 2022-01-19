@@ -35,11 +35,11 @@ export default function Subway() {
   }
 
   return (
-    <div className="border-2 border-black rounded-3xl py-6 px-2 text-lg flex justify-center items-center">
+    <div className="border-2 border-black dark:border-white rounded-3xl py-6 px-2 text-lg flex justify-center items-center">
       {data ? (
         <p className="text-center">
           <span
-            className="-m-2 p-2 rounded-full mr-1 leading-8 text-white"
+            className="-m-2 p-2 rounded-full mr-1 leading-8 text-white dark:text-black"
             style={{ backgroundColor: "#ed8b00" }}
           >
             Ruggles

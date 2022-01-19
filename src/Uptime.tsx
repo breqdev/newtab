@@ -9,10 +9,8 @@ const urFetcher = (url: string) =>
 function Circle({ children, className }: any) {
   return (
     <div className="relative w-6 h-6 flex justify-center items-center flex-shrink-0">
-      <span
-        className={`absolute ${className} inset-0 -m-2 rounded-full -z-10`}
-      />
-      <span className="z-10">{children}</span>
+      <span className={`absolute ${className} inset-0 -m-2 rounded-full`} />
+      <span className="z-10 text-black">{children}</span>
     </div>
   );
 }
@@ -43,7 +41,7 @@ export default function Uptime() {
   );
 
   return (
-    <div className="border-2 border-black rounded-3xl p-6 text-xl flex justify-center items-center">
+    <div className="border-2 border-black dark:border-white rounded-3xl p-6 text-xl flex justify-center items-center">
       {data ? (
         <UptimeData {...data} />
       ) : (

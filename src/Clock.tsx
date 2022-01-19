@@ -35,7 +35,7 @@ function TimezoneClock({ timezone, friendlyName }: TimezoneClockProps) {
   const offsetPadding = offset == 0 ? "\xA0" : offset > 0 ? "+" : "";
 
   return (
-    <tr className="font-mono text-lg text-gray-500 hover:text-black transition-colors duration-300">
+    <tr className="font-mono text-lg text-gray-500 hover:text-black dark:hover:text-white transition-colors duration-300">
       <td>{friendlyName}</td>
       <td className="px-3">{offsetPadding + offset}</td>
       <td>
@@ -80,7 +80,7 @@ export default function Clock() {
   ];
 
   return (
-    <div className="row-span-3 flex md:flex-col text-center border-2 border-black rounded-3xl p-4 md:p-8">
+    <div className="row-span-3 flex md:flex-col text-center border-2 border-black dark:border-white rounded-3xl p-4 md:p-8">
       <div className="flex flex-col self-center">
         <span className="text-5xl md:text-7xl mb-1">
           {time.toLocaleTimeString("en-US", {

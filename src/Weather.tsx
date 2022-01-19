@@ -13,7 +13,7 @@ export default function Weather() {
   );
 
   return (
-    <div className="border-2 border-black md:col-span-2 rounded-3xl  overflow-hidden">
+    <div className="border-2 border-black dark:border-white md:col-span-2 rounded-3xl  overflow-hidden">
       {data ? (
         <div className="flex h-full items-stretch">
           <div className="bg-gray-400 p-8">

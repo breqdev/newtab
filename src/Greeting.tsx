@@ -56,7 +56,7 @@ function GreetingPhrase() {
 
 export default function Greeting() {
   return (
-    <div className="border-2 border-black rounded-3xl md:col-span-2 p-2 md:p-8 flex items-center">
+    <div className="border-2 border-black dark:border-white rounded-3xl md:col-span-2 p-2 md:p-8 flex items-center">
       <p className="text-3xl md:text-4xl w-full text-center md:text-left">
         <GreetingPhrase />
       </p>
