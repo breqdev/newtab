@@ -46,7 +46,7 @@ function GreetingPhrase() {
     <span
       className={
         (fading ? "opacity-0" : "opacity-100") +
-        " transition-opacity duration-700"
+        " transition-opacity duration-700 lowercase"
       }
     >
       {phrases[index]}, <span className="text-pink-500">Brooke</span>.
