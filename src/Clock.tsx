@@ -74,6 +74,10 @@ export default function Clock() {
       friendlyName: "LHR",
     },
     {
+      timezone: "Europe/Kiev",
+      friendlyName: "KBP",
+    },
+    {
       timezone: "Asia/Shanghai",
       friendlyName: "PEK",
     },
