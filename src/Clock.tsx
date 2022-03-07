@@ -91,7 +91,7 @@ export default function Clock() {
             {time.toLocaleTimeString("en-US", {
               hour: "numeric",
               minute: "numeric",
-              hour12: false,
+              hourCycle: "h23",
             })}
           </span>
           <span className="text-3xl">{time.toLocaleDateString()}</span>
