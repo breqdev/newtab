@@ -84,25 +84,27 @@ export default function Clock() {
   ];
 
   return (
-    <div className="row-span-3 flex md:flex-col text-center border-2 border-black dark:border-white rounded-3xl p-4 md:p-8">
-      <div className="flex flex-col self-center">
-        <span className="text-5xl md:text-7xl mb-1">
-          {time.toLocaleTimeString("en-US", {
-            hour: "numeric",
-            minute: "numeric",
-            hour12: false,
-          })}
-        </span>
-        <span className="text-3xl">{time.toLocaleDateString()}</span>
+    <div className="row-span-3 text-center border-2 border-black dark:border-white rounded-3xl p-4 md:p-8">
+      <div className="w-full h-full max-w-sm mx-auto flex md:flex-col">
+        <div className="flex flex-col self-center">
+          <span className="text-5xl md:text-7xl mb-1">
+            {time.toLocaleTimeString("en-US", {
+              hour: "numeric",
+              minute: "numeric",
+              hour12: false,
+            })}
+          </span>
+          <span className="text-3xl">{time.toLocaleDateString()}</span>
+        </div>
+        <div className="flex-grow grid items-center" />
+        <table>
+          <tbody>
+            {zones.map((zone) => (
+              <TimezoneClock key={zone.timezone} {...zone} />
+            ))}
+          </tbody>
+        </table>
       </div>
-      <div className="flex-grow grid items-center" />
-      <table>
-        <tbody>
-          {zones.map((zone) => (
-            <TimezoneClock key={zone.timezone} {...zone} />
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 }
