@@ -12,7 +12,7 @@ const timeToArrival = (prediction: any) =>
 
 export default function Subway() {
   const { data, error } = useSWR(
-    "https://api-v3.mbta.com/predictions?filter[stop]=place-rugg&filter[route]=Orange&filter[direction_id]=1&include=stop&sort=arrival_time&page[limit]=5",
+    "https://api-v3.mbta.com/predictions?filter[stop]=place-masta&filter[route]=Orange&filter[direction_id]=1&include=stop&sort=arrival_time&page[limit]=5",
     mbtaFetcher,
     {
       refreshInterval: 10000,
@@ -42,7 +42,7 @@ export default function Subway() {
             className="-m-2 p-2 rounded-full mr-1 leading-8 text-white dark:text-black"
             style={{ backgroundColor: "#ed8b00" }}
           >
-            Ruggles
+            Mass Ave
           </span>
           {departureList}
         </p>
