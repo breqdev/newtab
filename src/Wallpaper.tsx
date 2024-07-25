@@ -34,7 +34,7 @@ export default function Wallpaper() {
   const whiteCaption = data && tinycolor(data.color).getBrightness() < 128;
 
   return (
-    <div className="md:col-span-3 xl:row-span-3 xl:col-span-2 border-2 border-black dark:border-white rounded-3xl h-full max-h-80 xl:max-h-full overflow-hidden">
+    <div className="xl:row-span-3 xl:col-span-2 border-2 border-black dark:border-white rounded-3xl h-full max-h-80 xl:max-h-full overflow-hidden hidden xl:block">
       {data ? (
         <div className="w-full h-full relative">
           <div className="xl:aspect-w-1 xl:aspect-h-1">

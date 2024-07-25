@@ -13,22 +13,22 @@ export default function Weather() {
   );
 
   return (
-    <div className="border-2 border-black dark:border-white md:col-span-2 rounded-3xl  overflow-hidden">
+    <div className="border-2 border-black dark:border-white rounded-3xl overflow-hidden md:row-span-2 xl:row-span-1">
       {data ? (
-        <div className="flex h-full items-stretch">
-          <div className="bg-gray-400 p-8">
-            <img
-              src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
-            />
-          </div>
-          <div className="flex flex-col p-8">
-            <span className="text-5xl md:text-7xl">
+        <div className="flex flex-col h-full">
+          <div className="flex flex-row gap-6 items-center">
+            <div className="bg-gray-400 p-1 xl:w-20 xl:h-20 rounded-br-2xl">
+              <img
+                src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+              />
+            </div>
+            <div className="text-6xl xl:text-4xl pr-4">
               {Math.round(data.main.temp)}° F
-            </span>
-            <span className="mt-2 -mb-2 text-lg md:text-2xl">
-              {data.weather[0].description}
-            </span>
+            </div>
           </div>
+          <p className="pb-2 px-2 text-center text-lg md:text-2xl xl:text-xl flex-grow grid place-content-center">
+            {data.weather[0].description}
+          </p>
         </div>
       ) : (
         <p className=" text-center">failed to load weather data</p>

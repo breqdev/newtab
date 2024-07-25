@@ -28,24 +28,17 @@ function TimezoneClock({ timezone, friendlyName }: TimezoneClockProps) {
     })
   );
 
-  const offset =
-    Math.round((timeInZone.getTime() - time.getTime()) / 3600000) -
-    Math.round(time.getTimezoneOffset() / 60);
-
-  const offsetPadding = offset == 0 ? "\xA0" : offset > 0 ? "+" : "";
-
   return (
-    <tr className="font-mono text-lg text-gray-500 hover:text-black dark:hover:text-white transition-colors duration-300">
-      <td>{friendlyName}</td>
-      <td className="px-3">{offsetPadding + offset}</td>
-      <td>
+    <div className="font-mono text-lg flex flex-col">
+      <span>
         {timeInZone.toLocaleTimeString("en-US", {
           hour: "numeric",
           minute: "numeric",
           hour12: false,
         })}
-      </td>
-    </tr>
+      </span>
+      <span className="text-gray-500 -mt-0.5">{friendlyName}</span>
+    </div>
   );
 }
 
@@ -63,19 +56,7 @@ export default function Clock() {
     },
     {
       timezone: "America/Los_Angeles",
-      friendlyName: "LAX",
-    },
-    {
-      timezone: "Europe/Berlin",
-      friendlyName: "BER",
-    },
-    {
-      timezone: "Europe/London",
-      friendlyName: "LHR",
-    },
-    {
-      timezone: "Europe/Kiev",
-      friendlyName: "KBP",
+      friendlyName: "SFO",
     },
     {
       timezone: "Asia/Shanghai",
@@ -84,9 +65,12 @@ export default function Clock() {
   ];
 
   return (
-    <div className="row-span-3 text-center border-2 border-black dark:border-white rounded-3xl p-4 md:p-8">
+    <div className="row-span-2 text-center border-2 border-black dark:border-white rounded-3xl p-4 md:p-8">
       <div className="w-full h-full max-w-sm mx-auto flex md:flex-col">
         <div className="flex flex-col self-center">
+          <span className="text-xl">
+            {time.toLocaleString(undefined, { weekday: "long" })}
+          </span>
           <span className="text-5xl md:text-7xl mb-1">
             {time.toLocaleTimeString("en-US", {
               hour: "numeric",
@@ -96,14 +80,11 @@ export default function Clock() {
           </span>
           <span className="text-3xl">{time.toLocaleDateString()}</span>
         </div>
-        <div className="flex-grow grid items-center" />
-        <table>
-          <tbody>
-            {zones.map((zone) => (
-              <TimezoneClock key={zone.timezone} {...zone} />
-            ))}
-          </tbody>
-        </table>
+        <div className="grid-cols-2 gap-2 pt-4 -mb-1 hidden xl:grid">
+          {zones.map((zone) => (
+            <TimezoneClock key={zone.timezone} {...zone} />
+          ))}
+        </div>
       </div>
     </div>
   );
