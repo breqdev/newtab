@@ -21,7 +21,7 @@ function Button({
   url: string;
 }) {
   return (
-    <a className="flex flex-col items-center gap-1" href={url}>
+    <a className="flex flex-col items-center gap-1" href={url} target="_top">
       <FontAwesomeIcon icon={icon} className="text-4xl" style={{ color }} />
       <span className="text-gray-600 dark:text-gray-200">{label}</span>
     </a>
