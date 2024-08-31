@@ -77,11 +77,11 @@ export default function Subway() {
   return (
     <div className="border-2 border-black dark:border-white rounded-3xl p-6 text-lg grid grid-cols-3 md:col-span-2 gap-x-4 gap-y-2">
       <Prediction
-        label="Mass Ave"
-        place="place-masta"
-        route="Orange"
-        direction={1}
-        color="#ed8b00"
+        label="Magoun Sq"
+        place="place-mgngl"
+        route="Green-E"
+        direction={0}
+        color="#00843d"
       />
       <Prediction
         label="Hynes"
@@ -105,10 +105,10 @@ export default function Subway() {
         color="#ed8b00"
       />
       <Prediction
-        label="Hynes"
-        place="93"
-        route="1"
-        direction={0}
+        label="Broadway"
+        place="2698"
+        route="89"
+        direction={1}
         color="#494F5C"
       />
       <Prediction
