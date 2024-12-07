@@ -6,9 +6,9 @@ const owmFetcher = (url: string) =>
     r.json()
   );
 
-export default function Weather() {
+export default function Weather({ zip }: { zip: string }) {
   const { data, error } = useSWR(
-    "https://api.openweathermap.org/data/2.5/weather?zip=02120,us&units=imperial",
+    `https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&units=imperial`,
     owmFetcher
   );
 

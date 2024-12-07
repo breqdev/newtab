@@ -19,7 +19,7 @@ function greetings() {
   }
 }
 
-function GreetingPhrase() {
+function GreetingPhrase({ name }: { name: string }) {
   const [phrases, setPhrases] = React.useState(greetings());
   const [index, setIndex] = React.useState(0);
   const [fading, setFading] = React.useState(false);
@@ -49,16 +49,16 @@ function GreetingPhrase() {
         " transition-opacity duration-700 lowercase"
       }
     >
-      {phrases[index]}, <span className="text-pink-500">Brooke</span>.
+      {phrases[index]}, <span className="text-pink-500">{name}</span>.
     </span>
   );
 }
 
-export default function Greeting() {
+export default function Greeting({ name }: { name: string }) {
   return (
     <div className="border-2 border-black dark:border-white rounded-3xl md:col-span-2 p-2 md:p-8 flex items-center">
       <p className="text-3xl md:text-4xl w-full text-center md:text-left">
-        <GreetingPhrase />
+        <GreetingPhrase name={name} />
       </p>
     </div>
   );

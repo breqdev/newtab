@@ -25,7 +25,7 @@ function usePrediction(place: string, route: string, direction: number) {
     return "loading...";
   }
 
-  if (data?.data) {
+  if (data?.data && data?.data.length) {
     return (
       " " +
       data.data
@@ -37,7 +37,7 @@ function usePrediction(place: string, route: string, direction: number) {
     );
   } else {
     console.log(data);
-    return " no\xA0service.";
+    return " no\xA0service";
   }
 }
 
