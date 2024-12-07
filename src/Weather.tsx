@@ -14,7 +14,7 @@ export default function Weather({ zip }: { zip: string }) {
 
   return (
     <div className="border-2 border-black dark:border-white rounded-3xl overflow-hidden md:row-span-2 xl:row-span-1">
-      {data ? (
+      {data && (
         <div className="flex flex-col h-full">
           <div className="flex flex-row gap-6 items-center">
             <div className="bg-gray-400 p-1 xl:w-20 xl:h-20 rounded-br-2xl">
@@ -30,8 +30,6 @@ export default function Weather({ zip }: { zip: string }) {
             {data.weather[0].description}
           </p>
         </div>
-      ) : (
-        <p className=" text-center">failed to load weather data</p>
       )}
     </div>
   );

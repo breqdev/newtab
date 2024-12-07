@@ -35,7 +35,7 @@ export default function Wallpaper() {
 
   return (
     <div className="xl:row-span-3 xl:col-span-2 border-2 border-black dark:border-white rounded-3xl overflow-hidden hidden xl:block relative">
-      {data ? (
+      {data && (
         <>
           <img
             className="object-cover w-full h-full aspect-square"
@@ -50,8 +50,6 @@ export default function Wallpaper() {
             {data.user.username} on unsplash
           </p>
         </>
-      ) : (
-        <p className="text-center p-4">wallpaper failed to load</p>
       )}
     </div>
   );
