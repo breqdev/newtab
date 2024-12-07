@@ -34,16 +34,14 @@ export default function Wallpaper() {
   const whiteCaption = data && tinycolor(data.color).getBrightness() < 128;
 
   return (
-    <div className="xl:row-span-3 xl:col-span-2 border-2 border-black dark:border-white rounded-3xl h-full max-h-80 xl:max-h-full overflow-hidden hidden xl:block">
+    <div className="xl:row-span-3 xl:col-span-2 border-2 border-black dark:border-white rounded-3xl overflow-hidden hidden xl:block relative">
       {data ? (
-        <div className="w-full h-full relative">
-          <div className="xl:aspect-w-1 xl:aspect-h-1">
-            <img
-              className="object-cover w-full h-full"
-              src={data.urls.regular}
-              alt={data.alt_description}
-            />
-          </div>
+        <>
+          <img
+            className="object-cover w-full h-full aspect-square"
+            src={data.urls.regular}
+            alt={data.alt_description}
+          />
           <p
             className={`absolute right-0 bottom-0 m-4 rounded-full px-2 py-1 md:text-base text-sm ${
               whiteCaption ? "text-white bg-black" : "text-black bg-white"
@@ -51,7 +49,7 @@ export default function Wallpaper() {
           >
             {data.user.username} on unsplash
           </p>
-        </div>
+        </>
       ) : (
         <p className="text-center p-4">wallpaper failed to load</p>
       )}

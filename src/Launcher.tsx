@@ -30,7 +30,7 @@ function Button({
 
 export default function Launcher() {
   return (
-    <div className="border-2 border-black dark:border-white rounded-3xl md:col-span-2 p-2 md:p-6 grid grid-cols-6 h-full">
+    <div className="border-2 border-black dark:border-white rounded-3xl md:col-span-2 p-2 md:p-6 grid grid-cols-6">
       <Button
         icon={faGithub}
         label="GitHub"

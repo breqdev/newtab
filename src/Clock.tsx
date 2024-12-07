@@ -66,8 +66,8 @@ export default function Clock() {
 
   return (
     <div className="row-span-2 text-center border-2 border-black dark:border-white rounded-3xl p-4 md:p-8">
-      <div className="w-full h-full max-w-sm mx-auto flex md:flex-col">
-        <div className="flex flex-col self-center">
+      <div className="w-full h-full max-w-sm mx-auto flex flex-row md:flex-col justify-center">
+        <div className="flex flex-col">
           <span className="text-xl">
             {time.toLocaleString(undefined, { weekday: "long" })}
           </span>
