@@ -1,5 +1,6 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
+  faBluesky,
   faGithub,
   faGitlab,
   faMastodon,
@@ -56,10 +57,10 @@ export default function Launcher() {
         url="https://maps.google.com/"
       />
       <Button
-        icon={faTwitter}
-        label="Twitter"
-        color="#1DA1F2"
-        url="https://twitter.com/"
+        icon={faBluesky}
+        label="Bluesky"
+        color="#0085ff"
+        url="https://bsky.app/"
       />
       <Button
         icon={faMastodon}
